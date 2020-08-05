@@ -42,6 +42,10 @@ public class PlayerController : MonoBehaviour
                 count ++;
                 SetCountText();
             }
+            else if (PalindromeString(getText) == false)
+            {
+                sound.Play();
+            }
 
         }
     }
@@ -63,17 +67,20 @@ public class PlayerController : MonoBehaviour
         }
         if (count == 4)
         {
-            winText.text = "Player hits  the Forth  Palindrome";
+            winText.text = "Player hits  the 4th  Palindrome";
         }
         if (count == 5)
         {
-            winText.text = "Player hits  the Forth  Palindrome";
+            winText.text = "Player hits  the 5th  Palindrome";
         }
         if (count == 6)
         {
-            winText.text = "Player hits  the Forth  Palindrome";
+            winText.text = "Player hits  the 6th  Palindrome";
         }
-
+        if (count == 6)
+        {
+            winText.text = "Player hits  the 7th  Palindrome";
+        }
 
     }
     public bool PalindromeString(string input)

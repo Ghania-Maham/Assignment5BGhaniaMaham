@@ -39,12 +39,14 @@ public class BracketPlayerController : MonoBehaviour
         {
             if (IsBalanced(getText) == true)
             {
-                other.gameObject.SetActive(false);
-                sound.Play();
+                other.gameObject.SetActive(false); 
                 count++;
                 SetCountText();
             }
-
+            else if (IsBalanced(getText) == false)
+            {
+                sound.Play();
+            }
         }
     }
     void SetCountText()
